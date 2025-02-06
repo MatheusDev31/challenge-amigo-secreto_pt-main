@@ -8,7 +8,9 @@ function adicionarAmigo() {
         amigos.push(amigo);
     }
 
-    limparCampo();  
+    limparCampo();
+    listaDeAmigos();
+    
 }
 
 function limparCampo() {
@@ -23,4 +25,22 @@ function sortearAmigo() {
         let amigoSorteado = document.getElementById('resultado');
         amigoSorteado.innerHTML = `O amigo secreto sorteado é: ${amigos[parseInt(Math.random() * amigos.length)]}`;
     }
+
+    limparLista();
+}
+
+function listaDeAmigos() {
+        let lista = document.getElementById('listaAmigos');
+        lista.innerHTML = '';
+            
+        for (let index = 0; index < amigos.length; index++) {
+            let li = document.createElement('li');
+            li.textContent = `${amigos[index]}`;
+            lista.appendChild(li);
+        }
+}
+
+function limparLista() {
+        let lista = document.getElementById('listaAmigos');
+        lista.innerHTML = '';
 }
