@@ -1,5 +1,7 @@
+// Array para armazenar lista de amigos.
 let amigos = [];
 
+// Função para adicionar amigos a lista.
 function adicionarAmigo() {
     let amigo = document.querySelector('input').value;
     if (amigo == '') {
@@ -10,14 +12,15 @@ function adicionarAmigo() {
 
     limparCampo();
     listaDeAmigos();
-    
 }
 
+// Função para limpar campo após adicionar um amigo.
 function limparCampo() {
     amigo = document.querySelector('input');
     amigo.value = '';
 }
 
+// Função para sortear amigo de forma aleatória.
 function sortearAmigo() {
     if (amigos == '') {
         alert('Por favor, insira um nome.');
@@ -29,6 +32,7 @@ function sortearAmigo() {
     limparLista();
 }
 
+// Função para mostrar lista de amigos.
 function listaDeAmigos() {
         let lista = document.getElementById('listaAmigos');
         lista.innerHTML = '';
@@ -40,7 +44,8 @@ function listaDeAmigos() {
         }
 }
 
+// Função pra limpar lista de amigos após o sorteio.
 function limparLista() {
         let lista = document.getElementById('listaAmigos');
-        lista.innerHTML = '';
+        lista.innerHTML = '';      
 }
